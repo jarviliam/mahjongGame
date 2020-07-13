@@ -2,8 +2,8 @@
 #ifndef MCORE_H
 #define MCORE_H
 
-
 #include "Header.h"
+
 class MCore
 {
 private:
@@ -16,8 +16,8 @@ private:
 	long frameTime;
 
 	//INPUIT
-
-
+	static bool movePressed, keyMenuPressed, keyS, keyW, keyA, keyD, keyShift;
+	static bool keyAPressed, keyDPressed;
 	//METHODS
 
 public:

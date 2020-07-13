@@ -3,7 +3,8 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-#include <SDL.h>
+#define SDL_MAIN_HANDLED
+#include "SDL.h"
 #include <SDL_image.h>
 
 #endif // !HEADER.H
