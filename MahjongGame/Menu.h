@@ -3,7 +3,7 @@
 #define MENU_h
 
 #include "Header.h"
-
+#include <vector>
 class Menu
 {
 public:
@@ -11,7 +11,7 @@ public:
 	~Menu(void);
 	
 	int activeMenu;
-
+	std::vector<MenuOption*> menuOptions;
 	virtual void Update();
 	virtual void Draw(SDL_Renderer* rR)
 };

@@ -17,7 +17,7 @@ include_directories(MahjongGame)
 
 
 file(GLOB_RECURSE MahjongGame_SOURCES "MahjongGame/*.cpp")
-add_executable (MahjongGame ${MahjongGame_SOURCES} "MahjongGame/Menu.h" "MahjongGame/Menu.cpp")
+add_executable (MahjongGame ${MahjongGame_SOURCES} "MahjongGame/Menu.h" "MahjongGame/Menu.cpp" "MahjongGame/MainMenu.h" "MahjongGame/MainMenu.cpp" "MahjongGame/MenuOption.h" "MahjongGame/MenuOption.cpp")
 target_link_libraries(MahjongGame ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARY} ${SDL2_MIXER_LIBRARY})
 
 install(TARGETS MahjongGame RUNTIME DESTINATION ${BIN_DIR})
