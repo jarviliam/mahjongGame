@@ -7,6 +7,6 @@
 int main(int argc, char *argv[])
 {
 	MCore mCore;
-	///mCore.runLoop();
+	mCore.runLoop();
 	return 0;
 }

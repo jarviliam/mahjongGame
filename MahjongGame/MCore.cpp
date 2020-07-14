@@ -17,7 +17,7 @@ bool MCore::quit = false;
 MCore::MCore(void) {
 	this->quit = false;
 	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_AUDIO);
-	window = SDL_CreateWindow("Mahjong Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 4448, SDL_WINDOW_SHOWN);
+	window = SDL_CreateWindow("Mahjong Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 448, SDL_WINDOW_SHOWN);
 
 	if (window == NULL) {
 		quit = true;
@@ -37,5 +37,19 @@ MCore::~MCore(void) {
 }
 
 void MCore::runLoop() {
+	while (!quit && mainEvent->type != SDL_QUIT) {
+		SDL_PollEvent(mainEvent);
+		SDL_RenderClear(rR);
+		
+		SDL_RenderFillRect(rR, NULL);
+		Input();
+ }
+}
+void MCore::Input() {
+	InputMenu();
+}
+void MCore::InputMenu() {
+	if (mainEvent->type == SDL_KEYDOWN) {
 
+}
 }

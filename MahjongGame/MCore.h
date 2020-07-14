@@ -29,6 +29,8 @@ public:
 	static bool quit;
 
 	void runLoop();
+	void Input();
+	void InputMenu();
 };
 
 
