@@ -13,7 +13,7 @@ public:
 	int activeMenu;
 	std::vector<MenuOption*> menuOptions;
 	virtual void Update();
-	virtual void Draw(SDL_Renderer* rR)
+	virtual void Draw(SDL_Renderer* rR);
 };
 #endif // 
 

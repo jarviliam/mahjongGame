@@ -15,10 +15,14 @@ include_directories(${SDL2_INCLUDE_DIR} ${SDL2_IMAGE_INCLUDE_DIR} ${SDL2_MIXER_I
 
 include_directories(MahjongGame)
 
+add_library(imgui "./MahjongGame/imgui/imgui.cpp""./MahjongGame/imgui/imgui_draw.cpp" "./MahjongGame/imgui/imgui_widgets.cpp")
 
 file(GLOB_RECURSE MahjongGame_SOURCES "MahjongGame/*.cpp")
 add_executable (MahjongGame ${MahjongGame_SOURCES} "MahjongGame/Menu.h" "MahjongGame/Menu.cpp" "MahjongGame/MainMenu.h" "MahjongGame/MainMenu.cpp" "MahjongGame/MenuOption.h" "MahjongGame/MenuOption.cpp")
 target_link_libraries(MahjongGame ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARY} ${SDL2_MIXER_LIBRARY})
-
+target_include_directories(imgui PUBLIC ${SDL2_INCLUDE_DIRS})
+target_include_directories(imgui PUBLIC ./MahjongGame/imgui/ ./MahjongGame/imgui/examples/)
+target_compile_definitions(imgui PUBLIC IMGUI_IMPL_OPENGL_LOADER_CUSTOM=<SDL_opengl.h>  GL_GLEXT_PROTOTYPES=1)
+target_link_libraries(MahjongGame imgui)
 install(TARGETS MahjongGame RUNTIME DESTINATION ${BIN_DIR})
 
