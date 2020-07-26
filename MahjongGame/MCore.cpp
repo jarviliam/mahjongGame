@@ -1,5 +1,6 @@
 #include "Header.h"
 #include "MCore.h"
+#include "MenuManager.h"
 
 //Globals
 
@@ -14,6 +15,7 @@ bool MCore::keyAPressed = false;
 bool MCore::keyDPressed = false;
 
 bool MCore::quit = false;
+MenuManager* MCore::mManager = new MenuManager();
 MCore::MCore(void) {
 	this->quit = false;
 	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_AUDIO);
@@ -32,6 +34,7 @@ MCore::MCore(void) {
 
 MCore::~MCore(void) {
 	delete mainEvent;
+	delete mManager;
 	SDL_DestroyRenderer(rR);
 		SDL_DestroyWindow(window);
 }
@@ -52,4 +55,7 @@ void MCore::InputMenu() {
 	if (mainEvent->type == SDL_KEYDOWN) {
 
 }
+}
+ MenuManager* MCore::getMenuManager() {
+	return mManager;
 }

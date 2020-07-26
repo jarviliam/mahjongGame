@@ -11,6 +11,7 @@ private:
 	SDL_Renderer* rR;
 	SDL_Event* mainEvent;
 
+	static MenuManager* mManager;
 	//FPS
 
 	long frameTime;
@@ -31,6 +32,8 @@ public:
 	void runLoop();
 	void Input();
 	void InputMenu();
+	//Dont forget Static Methods must return static vars
+	static MenuManager* getMenuManager();
 };
 
 
