@@ -4,15 +4,17 @@
 
 #include "MCore.h"
 #include "MainMenu.h"
+#include "Image.h"
 
 class MenuManager{
 
 private:
 
+Image* activeOpt;
 	MainMenu* mainMenu;
 public:
-	MainMenu(void);
-	~MainMenu(void);
+	MenuManager(void);
+	~MenuManager(void);
 
 	enum gameState {
 		eMainMenu,
@@ -20,16 +22,21 @@ public:
 		eGame,
 		eOptions,
 	};
-	gameState gameState;
+	gameState currentGameState;
 
 
+	void setActive(SDL_Renderer* rR);
 	void Update();
 	void Draw(SDL_Renderer* r);
 	void enter();
 	void esc();
 
+	void KeyPressed(int direction);
+	void resetActive(gameState ID);
 
 	MainMenu* getMainMenu();
+
+	int getViewID();
 }
 #endif // !MENUMANAGER_H
 

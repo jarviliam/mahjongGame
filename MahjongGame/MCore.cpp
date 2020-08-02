@@ -28,6 +28,8 @@ MCore::MCore(void) {
 	rR = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
 	mainEvent = new SDL_Event();
+
+	mManager->
 	this->keyMenuPressed = this->movePressed = this->keyS = this->keyW = this->keyA = this->keyD = this->keyShift = false;
 
 }
