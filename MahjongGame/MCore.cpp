@@ -1,6 +1,7 @@
 #include "Header.h"
 #include "MCore.h"
 #include "MenuManager.h"
+#include "imgui.h"
 
 //Globals
 
@@ -21,6 +22,10 @@ MCore::MCore(void) {
 	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_AUDIO);
 	window = SDL_CreateWindow("Mahjong Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 448, SDL_WINDOW_SHOWN);
 
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	ImGui::StyleColorsDark();
+
 	if (window == NULL) {
 		quit = true;
 	}
@@ -29,7 +34,7 @@ MCore::MCore(void) {
 
 	mainEvent = new SDL_Event();
 
-	mManager->
+	mManager->setActive(rR);
 	this->keyMenuPressed = this->movePressed = this->keyS = this->keyW = this->keyA = this->keyD = this->keyShift = false;
 
 }
