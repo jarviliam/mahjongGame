@@ -6,11 +6,11 @@
 #include "MainMenu.h"
 #include "Image.h"
 
-class MenuManager{
+class MenuManager {
 
 private:
 
-Image* activeOpt;
+	Image* activeOpt;
 	MainMenu* mainMenu;
 public:
 	MenuManager(void);
@@ -37,6 +37,5 @@ public:
 	MainMenu* getMainMenu();
 
 	int getViewID();
-}
+};
 #endif // !MENUMANAGER_H
-

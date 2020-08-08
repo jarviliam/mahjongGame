@@ -1,5 +1,6 @@
 #include "MenuManager.h";
 #include "MCore.h";
+#include "MenuOption.h";
 
 MenuManager::MenuManager(void) {
 

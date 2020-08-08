@@ -16,7 +16,7 @@ bool MCore::keyAPressed = false;
 bool MCore::keyDPressed = false;
 
 bool MCore::quit = false;
-MenuManager* MCore::mManager = new MenuManager();
+ MenuManager* MCore::mManager = new MenuManager();
 MCore::MCore(void) {
 	this->quit = false;
 	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_AUDIO);
@@ -46,6 +46,9 @@ MCore::~MCore(void) {
 		SDL_DestroyWindow(window);
 }
 
+ MenuManager* MCore::getMenuManager() {
+	return mManager;
+}
 void MCore::runLoop() {
 	while (!quit && mainEvent->type != SDL_QUIT) {
 		SDL_PollEvent(mainEvent);
@@ -56,13 +59,20 @@ void MCore::runLoop() {
  }
 }
 void MCore::Input() {
-	InputMenu();
+	switch (getMenuManager()->getViewID()) {
+	case 2:
+		InputGame();
+		break;
+	default:
+		InputMenu();
+		break;
+	}
+}
+void MCore::InputGame() {
+
 }
 void MCore::InputMenu() {
 	if (mainEvent->type == SDL_KEYDOWN) {
-
-}
-}
- MenuManager* MCore::getMenuManager() {
-	return mManager;
+		getMenuManager()->KeyPressed(1);
+	}
 }

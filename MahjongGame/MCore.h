@@ -3,6 +3,7 @@
 #define MCORE_H
 
 #include "Header.h"
+#include "MenuManager.h"
 
 class MCore
 {
@@ -29,13 +30,13 @@ public:
 
 	static bool quit;
 
+	static MenuManager* getMenuManager();
 	void runLoop();
 	void Input();
 	void InputMenu();
+	void InputGame();
 	//Dont forget Static Methods must return static vars
-	static MenuManager* getMenuManager();
 };
-
 
 
 #endif // !MCORE_H
