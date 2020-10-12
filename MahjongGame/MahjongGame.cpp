@@ -3,6 +3,7 @@
 
 #include "Header.h"
 #include "MCore.h"
+#include "imgui_impl_glfw.h"
 #include "imgui.h"
 
 int main(int argc, char *argv[])

@@ -55,6 +55,36 @@
           "name": "SDL2_Image_DIR",
           "value": "C:/c++/SDL2_image-2.0.5",
           "type": "PATH"
+        },
+        {
+          "name": "GLEW_DIR",
+          "value": "C:/Users/Liam/source/repos/MahjongGame/MahjongGame/glew",
+          "type": "PATH"
+        },
+        {
+          "name": "GLEW_INCLUDE_DIR",
+          "value": "C:/Users/Liam/source/repos/MahjongGame/MahjongGame/glew",
+          "type": "PATH"
+        },
+        {
+          "name": "GLEW_SHARED_LIBRARY_DEBUG",
+          "value": "C:/Users/Liam/source/repos/MahjongGame/MahjongGame/glew/lib/Release/x64/glew32.lib",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "GLEW_SHARED_LIBRARY_RELEASE",
+          "value": "C:/Users/Liam/source/repos/MahjongGame/MahjongGame/glew/lib/Release/x64/glew32.lib",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "GLEW_STATIC_LIBRARY_DEBUG",
+          "value": "C:/Users/Liam/source/repos/MahjongGame/MahjongGame/glew/lib/Release/x64/glew32s.lib",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "GLEW_STATIC_LIBRARY_RELEASE",
+          "value": "C:/Users/Liam/source/repos/MahjongGame/MahjongGame/glew/lib/Release/x64/glew32s.lib",
+          "type": "FILEPATH"
         }
       ]
     }

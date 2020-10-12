@@ -2,6 +2,8 @@
 #include "MCore.h"
 #include "MenuManager.h"
 #include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_sdl.h"
 
 //Globals
 
@@ -25,6 +27,7 @@ MCore::MCore(void) {
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO(); (void)io;
 	ImGui::StyleColorsDark();
+	ImGui_ImplSDL2_InitForOpenGL(window, false);
 
 	if (window == NULL) {
 		quit = true;
