@@ -13,6 +13,7 @@ find_package(SDL2_Image REQUIRED)
 find_package(SDL2_Mixer REQUIRED)
 find_package(GLEW REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR} ${SDL2_IMAGE_INCLUDE_DIR} ${SDL2_MIXER_INCLUDE_DIR})
+
 if (GLEW_FOUND)
     include_directories(${GLEW_INCLUDE_DIRS})
 endif()

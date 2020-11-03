@@ -63,7 +63,7 @@
         },
         {
           "name": "GLEW_INCLUDE_DIR",
-          "value": "C:/Users/Liam/source/repos/MahjongGame/MahjongGame/glew",
+          "value": "C:/Users/Liam/source/repos/MahjongGame/MahjongGame/glew/include",
           "type": "PATH"
         },
         {
